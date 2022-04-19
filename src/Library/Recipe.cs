@@ -28,11 +28,14 @@ namespace Full_GRASP_And_SOLID.Library
         public void PrintRecipe()
         {
             Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
+            double total = 0;
             foreach (Step step in this.steps)
             {
                 Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
+                    total += step.GetProductionCost();
             }
+            Console.WriteLine("Total: "+total);
         }
     }
 }
