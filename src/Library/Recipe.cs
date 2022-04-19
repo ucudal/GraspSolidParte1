@@ -35,7 +35,7 @@ namespace Full_GRASP_And_SOLID.Library
                     $"usando '{step.Equipment.Description}' durante {step.Time}");
                     total += step.GetProductionCost();
             }
-            Console.WriteLine("Total: "+total);
+            Console.WriteLine("Total de la receta: "+total);
         }
     }
 }

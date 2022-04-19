@@ -24,7 +24,8 @@ namespace Full_GRASP_And_SOLID.Library
 
         public Equipment Equipment { get; set; }
 
-
+        //Para asignar esta responsabilidad se utiliza el patron Expert, ya que Step es el experto que conoce toda
+        // la información sobre los precios y cantidades de cada paso
         public double GetProductionCost()
         {
             double equipment = this.Equipment.HourlyCost * this.Time;
